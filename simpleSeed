@@ -1,6 +1,6 @@
-job('simpleTrigger') {
+job('simpleTriggerGit') {
   parameters {
-    stringParam('Object','Understood','This parameter discribe atype of object')
+    stringParam('Object','UnderstoodGit','This parameter discribe atype of object')
   }
   steps {
     shell ('echo $JOB_NAME $BUILD_NUMBER')
