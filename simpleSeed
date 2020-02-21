@@ -1,12 +1,7 @@
-job('simpleTriggerGit') {
-  parameters {
-    stringParam('Object','UnderstoodGit','This parameter discribe atype of object')
-  }
-  steps {
-    shell ('echo $JOB_NAME $BUILD_NUMBER')
-    shell ('echo $Object')
-  }
-  publishers {
-    downstream('simpleJobWithParamter','SUCCESS')
-  }
+for (i=1;i<=10;++i){
+  job("job-$i") {
+     steps {
+     shell ('echo $JOB_NAME $BUILD_NUMBER')
+   }
+ }
 }
